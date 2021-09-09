@@ -7,18 +7,14 @@ type TPageProps = {
 };
 
 const Page = ({children}: TPageProps) => {
-  return (
-    <SafeAreaView>
-      <StatusBar />
-      <View style={styles.body}>{children}</View>
-    </SafeAreaView>
-  );
+  return <View style={styles.body}>{children}</View>;
 };
 
 const styles = StyleSheet.create({
   body: {
     flex: 1,
-    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

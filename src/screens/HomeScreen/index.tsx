@@ -9,10 +9,19 @@ const HomeScreen = ({navigation}: TAppNavigationProps<'Home'>) => {
     navigation.navigate('Details');
   }, [navigation]);
 
+  const handleNavigateWithParams = useCallback(() => {
+    navigation.navigate('Details', {
+      id: 'PF-D3F567',
+      title: 'Hi I am a title',
+      description: 'This is a description',
+    });
+  }, [navigation]);
+
   return (
     <Page>
       <Text>Welcome to the Home Screen</Text>
       <Button title="Go to Details" onPress={handleOnPress} />
+      <Button title="Navigate with Params" onPress={handleNavigateWithParams} />
     </Page>
   );
 };

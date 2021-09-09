@@ -3,9 +3,15 @@ import {
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
 
+export type TDetailsScreenParams = {
+  id: string;
+  title: string;
+  description: string;
+};
+
 export type TRootStackParams = {
   Home: undefined;
-  Details: undefined;
+  Details?: TDetailsScreenParams;
 };
 
 export const Stack = createNativeStackNavigator<TRootStackParams>();
